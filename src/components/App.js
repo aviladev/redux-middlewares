@@ -1,7 +1,11 @@
 import React from 'react'
 
+import UserList from './UserList'
+
 const App = () => (
-  <h1>Redux Middlewares</h1>
+  <div>
+    <UserList />
+  </div>
 )
 
 export default App
