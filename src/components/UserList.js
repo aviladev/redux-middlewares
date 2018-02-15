@@ -8,15 +8,15 @@ class UserList extends Component {
     this.props.fetchUsers()
   }
 
-  renderUser = ({name}) => (
+  renderUser = ({name, company, website}) => (
     <div key={name}
       className="card mb-4"
       style={{ minWidth: 300, width: '30%' }}
     >
       <div className="card-body">
         <h4 className="card-title">{name}</h4>
-        <p className="card-text">Company Name</p>
-        <a href="#" className="btn btn-primary">Email</a>
+        <p className="card-text">{company.name}</p>
+        <a href={website} className="btn btn-primary">Website</a>
       </div>
     </div>
   )
