@@ -9,18 +9,29 @@ class UserList extends Component {
   }
 
   renderUser = ({name}) => (
-    <div key={name}>
-      <h4>{name}</h4>
-      <p>Company Name</p>
-      <a>Email</a>
+    <div key={name}
+      className="card mb-4"
+      style={{ minWidth: 300, width: '30%' }}
+    >
+      <div className="card-body">
+        <h4 className="card-title">{name}</h4>
+        <p className="card-text">Company Name</p>
+        <a href="#" className="btn btn-primary">Email</a>
+      </div>
     </div>
   )
 
   render () {
     const { users } = this.props
 
+    const style = {
+      display: 'flex',
+      justifyContent: 'space-around',
+      flexWrap: 'wrap'
+    }
+
     return (
-      <div>
+      <div className="container pt-2" style={style}>
         {users.map(this.renderUser)}
       </div>
     )
